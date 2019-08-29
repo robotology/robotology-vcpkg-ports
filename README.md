@@ -13,7 +13,7 @@ git clone https://github.com/robotology-dependencies/robotology-vcpkg-binary-por
 
 Then, to install the `ipopt-binary` port, run `vcpkg` with the following options: 
 ~~~
-./vcpkg.exe --overlay-ports=<repo_parent_directory>/robotology-vcpkg-binary-ports install ipopt-binary:x64-windows --
+./vcpkg.exe --overlay-ports=<repo_parent_directory>/robotology-vcpkg-binary-ports install ipopt-binary:x64-windows
 ~~~
 
 ## Available ports 
