@@ -8,7 +8,7 @@ the [`--overlay-ports` option](https://github.com/microsoft/vcpkg/blob/master/do
 
 For example, you can first clone this repo:
 ~~~
-git clone https://github.com/robotology-dependencies/robotology-vcpkg-binary-ports
+git clone https://github.com/robotology/robotology-vcpkg-binary-ports
 ~~~
 
 Then, to install the `ipopt-binary` port, run `vcpkg` with the following options: 
