@@ -23,3 +23,5 @@ jobs:
         git clone https://github.com/microsoft/vcpkg  C:/vcpkg-test/vcpkg
         C:/vcpkg-test/vcpkg/bootstrap-vcpkg.sh
         C:/vcpkg-test/vcpkg/vcpkg.exe --overlay-ports=${GITHUB_WORKSPACE} install --triplet x64-windows ipopt-binary
+        # Try to install another library to check if the installation is ok
+        C:/vcpkg-test/vcpkg/vcpkg.exe install --triplet x64-windows asio
