@@ -8,8 +8,14 @@ on:
   # Execute a "nightly" build at 2 AM UTC 
   - cron:  '0 2 * * *'
 
+
 jobs:
   build:
+    name: '[${{ matrix.vcpkg_version }}]'
+    strategy:  
+      fail-fast: false
+      matrix:
+        vcpkg_version: [master, 2020.01, 2019.12]
 
     runs-on: windows-latest
 
@@ -21,6 +27,8 @@ jobs:
       run: |
         mkdir C:/vcpkg-test
         git clone https://github.com/microsoft/vcpkg  C:/vcpkg-test/vcpkg
+        cd C:/vcpkg-test/vcpkg 
+        git checkout ${{ matrix.vcpkg_version }}
         C:/vcpkg-test/vcpkg/bootstrap-vcpkg.sh
         C:/vcpkg-test/vcpkg/vcpkg.exe --overlay-ports=${GITHUB_WORKSPACE} install --triplet x64-windows ipopt-binary
         # Try to install another library to check if the installation is ok
