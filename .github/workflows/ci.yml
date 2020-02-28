@@ -15,7 +15,7 @@ jobs:
     strategy:  
       fail-fast: false
       matrix:
-        vcpkg_version: [master, 2020.01, 2019.12]
+        vcpkg_version: [2020.01, 2019.12]
 
     runs-on: windows-latest
 
