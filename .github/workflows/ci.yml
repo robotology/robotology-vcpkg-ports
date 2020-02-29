@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  # Execute a "nightly" build at 2 AM UTC 
+  - cron:  '0 2 * * *'
+
+
+jobs:
+  build:
+    name: '[${{ matrix.vcpkg_version }}]'
+    strategy:  
+      fail-fast: false
+      matrix:
+        vcpkg_version: [2020.01, 2019.12]
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Run on latest vcpkg 
+      shell: bash
+      run: |
+        mkdir C:/vcpkg-test
+        git clone https://github.com/microsoft/vcpkg  C:/vcpkg-test/vcpkg
+        cd C:/vcpkg-test/vcpkg 
+        git checkout ${{ matrix.vcpkg_version }}
+        C:/vcpkg-test/vcpkg/bootstrap-vcpkg.sh
+        C:/vcpkg-test/vcpkg/vcpkg.exe --overlay-ports=${GITHUB_WORKSPACE} install --triplet x64-windows ipopt-binary
+        # Try to install another library to check if the installation is ok
+        C:/vcpkg-test/vcpkg/vcpkg.exe install --triplet x64-windows asio
