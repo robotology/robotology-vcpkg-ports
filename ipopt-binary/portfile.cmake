@@ -27,6 +27,9 @@ file(INSTALL ${SOURCE_PATH}/lib DESTINATION ${CURRENT_PACKAGES_DIR})
 file(INSTALL ${SOURCE_PATH}/bin DESTINATION ${CURRENT_PACKAGES_DIR}/debug)
 file(INSTALL ${SOURCE_PATH}/lib DESTINATION ${CURRENT_PACKAGES_DIR}/debug)
 
+# Install an Ipopt-config.cmake file for compatibility with Casadi
+file(INSTALL ${CMAKE_CURRENT_LIST_DIR}/Ipopt-config.cmake DESTINATION ${CURRENT_PACKAGES_DIR}/share/Ipopt)
+
 # Handle copyright
 file(INSTALL ${SOURCE_PATH}/share/coin/doc/Ipopt/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/ipopt-binary RENAME copyright)
 
