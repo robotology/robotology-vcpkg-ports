@@ -1,0 +1,5 @@
+Source: casadi
+Version: 3.5.5
+Homepage: https://web.casadi.org/
+Description: CasADi is an open-source tool for nonlinear optimization and algorithmic differentiation.
+Build-Depends: ipopt-binary
