@@ -1,5 +1,5 @@
-# robotology-vcpkg-binary-ports
-Collection of vcpkg ports available on limited platform just in binary form. 
+# robotology-vcpkg-ports
+Collection of vcpkg ports used in the robotology organization.
 
 ## Usage
 
@@ -8,13 +8,15 @@ the [`--overlay-ports` option](https://github.com/microsoft/vcpkg/blob/master/do
 
 For example, you can first clone this repo:
 ~~~
-git clone https://github.com/robotology/robotology-vcpkg-binary-ports
+git clone https://github.com/robotology/robotology-vcpkg-ports
 ~~~
 
 Then, to install the `ipopt-binary` port, run `vcpkg` with the following options: 
 ~~~
 ./vcpkg.exe --overlay-ports=<repo_parent_directory>/robotology-vcpkg-binary-ports install ipopt-binary:x64-windows
 ~~~
+
+All the ports that end with `-binary` actually just download already available binaries, and install them in the vcpkg install prefix. 
 
 ## Available ports 
 
