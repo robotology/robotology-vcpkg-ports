@@ -23,3 +23,4 @@ Then, to install the `ipopt-binary` port, run `vcpkg` with the following options
 | [`ensenso-binary`](ensenso-binary)| `x64-windows`                | 
 | [`esdcan-binary`](esdcan-binary)| `x64-windows`                | 
 | [`ipopt-binary`](ipopt-binary)| `x64-windows`                | 
+| [`casadi`](casadi)| `x64-windows`                | 
