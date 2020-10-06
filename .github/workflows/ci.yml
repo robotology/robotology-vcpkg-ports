@@ -15,7 +15,7 @@ jobs:
     strategy:  
       fail-fast: false
       matrix:
-        vcpkg_version: [master, 13f5a3d6159069d216b82695afcd21f7f0bbb827]
+        vcpkg_version: [master, 76a7e9248fb3c57350b559966dcaa2d52a5e4458]
 
     runs-on: windows-latest
 
