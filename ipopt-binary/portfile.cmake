@@ -10,7 +10,7 @@ if(VCPKG_CMAKE_SYSTEM_NAME)
 endif()
 
 vcpkg_download_distfile(ARCHIVE
-    URLS "http://www.icub.org/download/3rd-party/ipopt-3.12.7_msvc14_x86_amd64.zip"
+    URLS "https://github.com/robotology/robotology-vcpkg-ports/releases/download/storage/ipopt-3.12.7_msvc14_x86_amd64.zip"
     FILENAME "ipopt-3.12.7_msvc14_x86_amd64.zip"
     SHA512 26b42b8f6a75a815a3b3988b828a383965e291d4c204f053591b9e05e7925aa265d055a10d771fb505ea4ed98a1e9aa2521ce9d0375afe54ee75418a39dfafc1
 )
