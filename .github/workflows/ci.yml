@@ -17,7 +17,7 @@ jobs:
       matrix:
         vcpkg_version:
           - master
-          - 76a7e9248fb3c57350b559966dcaa2d52a5e4458
+          - 91393faf123c4f1d22ef3dbfb4ec03531bac907a
 
     runs-on: windows-latest
 
