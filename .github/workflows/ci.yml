@@ -18,17 +18,6 @@ jobs:
         vcpkg_version:
           - master
           - 76a7e9248fb3c57350b559966dcaa2d52a5e4458
-          # Bisect https://github.com/robotology/robotology-vcpkg-ports/issues/18
-          # https://github.com/microsoft/vcpkg/commit/e4ce66eecfd3e5cca5eac06c971921bf8e37cf88
-          - e4ce66eecfd3e5cca5eac06c971921bf8e37cf88
-          # https://github.com/microsoft/vcpkg/pull/15709
-          - 3b433e5081f35a32331492d98a8b0c1c2477048e
-          # https://github.com/microsoft/vcpkg/pull/15802
-          - 0e4d6f084f95584b7fc7460509821115f1868d30
-          # https://github.com/microsoft/vcpkg/pull/15732
-          - 925b64efd2210e04568dfd5a33473e86a6d618a9
-          # https://github.com/microsoft/vcpkg/commit/5065bf984abad0d3ad79f73cdc59ee95733c91ad
-          - 5065bf984abad0d3ad79f73cdc59ee95733c91ad
 
     runs-on: windows-latest
 
