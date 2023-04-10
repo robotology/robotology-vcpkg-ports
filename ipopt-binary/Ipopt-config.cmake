@@ -14,3 +14,11 @@ set(Ipopt_LIBRARIES  "optimized;${PACKAGE_PREFIX_DIR}/lib/libipopt.lib;debug;${P
 set(IPOPT_FOUND ON)
 set(IPOPT_INCLUDE_DIRS ${Ipopt_INCLUDE_DIR})
 set(IPOPT_LIBRARY_DIRS "${PACKAGE_PREFIX_DIR}/lib")
+
+# The ipopt imported target is required by casadi's FindIPOPT
+# See https://github.com/casadi/casadi/blob/3.6.0/cmake/FindIPOPT.cmake#L47
+if(NOT TARGET ipopt)
+  add_library(ipopt INTERFACE)
+  target_link_libraries(ipopt INTERFACE ${Ipopt_LIBRARIES})
+  target_include_directories(ipopt INTERFACE ${IPOPT_INCLUDE_DIRS})
+endif()

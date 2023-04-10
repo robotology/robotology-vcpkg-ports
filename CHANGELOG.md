@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2023-04-10
+
+### Added
+- Added `ipopt` CMake imported target in the CMake config file installed by the `ipopt-binary` (https://github.com/robotology/robotology-vcpkg-ports/pull/22).
+
 ## [0.2.0] - 2021-05-29
 
 ### Added 
