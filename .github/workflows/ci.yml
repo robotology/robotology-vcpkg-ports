@@ -17,12 +17,12 @@ jobs:
       matrix:
         vcpkg_version:
           - master
-          - 91393faf123c4f1d22ef3dbfb4ec03531bac907a
+          - 2023.12.12
 
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     
     - name: Run on latest vcpkg 
       shell: bash
