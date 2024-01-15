@@ -32,6 +32,6 @@ jobs:
         cd C:/vcpkg-test/vcpkg 
         git checkout ${{ matrix.vcpkg_version }}
         C:/vcpkg-test/vcpkg/bootstrap-vcpkg.sh
-        C:/vcpkg-test/vcpkg/vcpkg.exe --overlay-ports=${GITHUB_WORKSPACE} install --triplet x64-windows esdcan-binary ensenso-binary ipopt-binary casadi
+        C:/vcpkg-test/vcpkg/vcpkg.exe --overlay-ports=${GITHUB_WORKSPACE} install --triplet x64-windows esdcan-binary ensenso-binary ipopt-binary casadi yarp[command-line-tools] icub-main[embobj]
         # Try to install another library to check if the installation is ok
         C:/vcpkg-test/vcpkg/vcpkg.exe install --triplet x64-windows asio
