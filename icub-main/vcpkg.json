@@ -1,0 +1,41 @@
+{
+  "name": "icub-main",
+  "version": "2.4.1",
+  "homepage": "https://github.com/robotology/icub-main",
+  "description": "The iCub Main Software Repository",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    "ace",
+    "yarp",
+    {
+      "name": "ycm-cmake-modules",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+
+  "default-features": [],
+  "features": {
+    "dragonfly2": {
+      "description": "Compile YARP device driver for dragonfly2 camera.",
+      "dependencies": []
+    },
+    "embobj": {
+      "description": "Compile libraries and YARP device drivers for iCub's embObj Ethernet boards.",
+      "dependencies": [
+        "icub-firmware-shared"
+      ]
+    },
+    "can": {
+      "description": "Compile libraries and YARP device drivers for iCub's CAN boards.",
+      "dependencies": []
+    }
+  }
+}

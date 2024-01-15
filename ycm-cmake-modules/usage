@@ -1,0 +1,7 @@
+The package ycm-cmake-modules provides CMake modules:
+
+    find_package(YCM CONFIG REQUIRED NO_MODULE)
+    include(InstallBasicPackageFiles)
+    include(AddUninstallTarget)
+
+For more infomation, see https://github.com/robotology/ycm

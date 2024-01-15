@@ -1,0 +1,6 @@
+The package icub-main provides CMake targets:
+
+    find_package(ICUB CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE ctrlLib iKin)
+
+There are many optional targets in icub-main, check icub-main docs for more info.
