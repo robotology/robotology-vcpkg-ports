@@ -26,4 +26,8 @@ All the ports that end with `-binary` actually just download already available b
 | [`esdcan-binary`](esdcan-binary)| `x64-windows`                | 
 | [`ipopt-binary`](ipopt-binary)| `x64-windows`                | 
 | [`casadi`](casadi)| `x64-windows`                | 
+| [`ycm-cmake-modules`](ycm-cmake-modules) | `x64-windows`                | 
+| [`yarp`](yarp)| `x64-windows`                | 
+| [`icub-firmware-shared`](icub-firmware-shared) | `x64-windows`                | 
+| [`icub-main`](icub-main) | `x64-windows`                | 
 
