@@ -1,0 +1,6 @@
+The package yarp provides CMake targets:
+
+    find_package(YARP CONFIG COMPONENTS os dev math REQUIRED)
+    target_link_libraries(main PRIVATE YARP::YARP_os YARP::YARP_dev YARP::YARP_math)
+
+There are many optional components and targets in yarp, check yarp docs for more info.

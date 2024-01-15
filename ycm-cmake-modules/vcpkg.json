@@ -1,0 +1,25 @@
+{
+  "name": "ycm-cmake-modules",
+  "version": "0.16.2",
+  "homepage": "https://github.com/robotology/ycm",
+  "description": "YCM (YCM CMake modules) is a collection of various useful CMake modules.",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+
+  "default-features": [],
+  "features": {
+    "example-feature": {
+      "description": "",
+      "dependencies": []
+    }
+  }
+}

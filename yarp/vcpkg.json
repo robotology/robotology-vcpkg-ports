@@ -1,0 +1,48 @@
+{
+  "name": "yarp",
+  "version": "3.9.0",
+  "homepage": "https://github.com/robotology/yarp",
+  "description": "YARP - Yet Another Robot Platform",
+  "license": "BSD-3-Clause",
+  "dependencies": [
+    "ace",
+    "eigen3",
+    "libjpeg-turbo",
+    "sqlite3",
+    "tinyxml",
+    {
+      "name": "ycm-cmake-modules",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
+    }
+  ],
+
+  "default-features": [],
+  "features": {
+    "command-line-tools": {
+      "description": "Support compiling command line executables.",
+      "dependencies": []
+    },
+    "gui-tools": {
+      "description": "Support compiling graphical executables.",
+      "dependencies": [
+        "qt5-base",
+        "qt5-declarative",
+        "qt5-multimedia",
+        "qt5-quickcontrols",
+        "qt5-quickcontrols2"
+      ]
+    },
+    "fake-devices": {
+      "description": "Support compiling fake devices.",
+      "dependencies": []
+    }
+  }
+}
