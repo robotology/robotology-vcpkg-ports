@@ -1,0 +1,30 @@
+From 1e8fa5d37d460207289861159f3c0023757e74ad Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio.traversaro@iit.it>
+Date: Mon, 22 Jan 2024 00:08:16 +0100
+Subject: [PATCH] Fix installation directory of ethResources shared library on
+ Windows
+
+---
+ src/libraries/icubmod/embObjLib/CMakeLists.txt | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/src/libraries/icubmod/embObjLib/CMakeLists.txt b/src/libraries/icubmod/embObjLib/CMakeLists.txt
+index 80e3ccf33e..a776c7aa5d 100644
+--- a/src/libraries/icubmod/embObjLib/CMakeLists.txt
++++ b/src/libraries/icubmod/embObjLib/CMakeLists.txt
+@@ -97,7 +97,14 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/../m
+                                                 ../skinLib)
+ target_include_directories(${PROJECT_NAME} PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
+                                                   "$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>")
+-install(TARGETS ${PROJECT_NAME} DESTINATION lib)
++
++install(TARGETS ${PROJECT_NAME}
++        RUNTIME
++          DESTINATION "${CMAKE_INSTALL_BINDIR}"
++        ARCHIVE
++          DESTINATION "${CMAKE_INSTALL_LIBDIR}"
++        LIBRARY
++            DESTINATION "${CMAKE_INSTALL_LIBDIR}")
+ 
+ target_link_libraries(${PROJECT_NAME} YARP::YARP_os
+                                       YARP::YARP_dev

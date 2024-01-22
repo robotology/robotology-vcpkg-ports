@@ -4,6 +4,7 @@ vcpkg_from_github(
     REF "v${VERSION}"
     SHA512 279e3cb7ce07dc9664cafd0aa9ac3273be606bd4888c77b482758de9a5733457d9a177581892470702f23917b5ee2ee45638d4061cbc418738d18e6ccde3e13c
     HEAD_REF master
+    PATCHES 934.patch
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
@@ -12,11 +13,15 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
 )
 
 if("embobj" IN_LIST FEATURES)
-    set(ICUB_MAIN_COMPILE_EMBOBJ)
+    set(ICUB_MAIN_COMPILE_EMBOBJ ON)
+else()
+    set(ICUB_MAIN_COMPILE_EMBOBJ OFF)
 endif()
 
 if("can" IN_LIST FEATURES)
-    set(ICUB_MAIN_COMPILE_CAN)
+    set(ICUB_MAIN_COMPILE_CAN ON)
+else()
+    set(ICUB_MAIN_COMPILE_CAN OFF)
 endif()
 
 vcpkg_cmake_configure(
@@ -30,7 +35,6 @@ vcpkg_cmake_configure(
         -DENABLE_icubmod_cartesiancontrollerclient:BOOL=ON
         -DENABLE_icubmod_gazecontrollerclient:BOOL=ON
         -DENABLE_icubmod_skinWrapper:BOOL=ON
-        -DENABLE_icubmod_portaudio:BOOL=OFF
         -DENABLE_icubmod_sharedcan:BOOL=ON
         -DENABLE_icubmod_bcbBattery:BOOL=${ICUB_MAIN_COMPILE_EMBOBJ}
         -DENABLE_icubmod_canmotioncontrol:BOOL=${ICUB_MAIN_COMPILE_CAN}
